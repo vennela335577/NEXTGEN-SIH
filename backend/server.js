@@ -1,4 +1,7 @@
+require("dotenv").config();
+
 const express = require("express");
+
 const explainRoute = require("./routes/explain");
 const detectLanguageRoute = require("./routes/detectLanguage");
 const topicsRoute = require("./routes/topics");

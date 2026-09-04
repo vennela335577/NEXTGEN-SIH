@@ -7,6 +7,12 @@ router.post("/", async (req, res) => {
   try {
     const { topic, language } = req.body;
 
+    if (!topic || !language) {
+      return res.status(400).json({
+        error: "Topic and language are required"
+      });
+    }
+
     const prompt = `
 Explain the educational topic below in a simple way.
 
