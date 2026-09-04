@@ -1,8 +1,7 @@
-require("dotenv").config();
-
 const express = require("express");
 const explainRoute = require("./routes/explain");
 const detectLanguageRoute = require("./routes/detectLanguage");
+const topicsRoute = require("./routes/topics");
 
 const app = express();
 
@@ -11,6 +10,7 @@ app.use(express.json());
 // API Routes
 app.use("/explain", explainRoute);
 app.use("/detect-language", detectLanguageRoute);
+app.use("/topics", topicsRoute);
 
 // Home route
 app.get("/", (req, res) => {
