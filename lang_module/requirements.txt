@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+langdetect
+pydantic
+deep-translator
+requests
