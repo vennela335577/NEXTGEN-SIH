@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 
 function App() {
@@ -7,10 +6,17 @@ function App() {
   const [language, setLanguage] = useState('English')
   const [isLoading, setIsLoading] = useState(false)
   const [showExplanation, setShowExplanation] = useState(false)
+
+  const [explanation, setExplanation] = useState(null)
+  const [apiError, setApiError] = useState('')
+  const [analogy, setAnalogy] = useState('')
+
   const [quizAnswer, setQuizAnswer] = useState('')
   const [quizChecked, setQuizChecked] = useState(false)
+
   const [imagePreview, setImagePreview] = useState('')
   const [selectedImage, setSelectedImage] = useState(null)
+
   const [followUpQuestion, setFollowUpQuestion] = useState('')
   const [followUpSent, setFollowUpSent] = useState(false)
 
@@ -67,20 +73,56 @@ function App() {
   }
 
   // Ask AI
-  const handleAskAI = () => {
+  const handleAskAI = async () => {
     if (!question.trim() && !selectedImage) {
       alert('Please enter your question or upload an image first.')
       return
     }
 
-    setIsLoading(true)
+    if (!question.trim()) {
+      alert(
+        'For now, please type your question. Image AI processing will be connected later.'
+      )
+      return
+    }
 
-    // Temporary frontend demo loading.
-    // Backend/API will be connected later.
-    setTimeout(() => {
-      setIsLoading(false)
+    setIsLoading(true)
+    setApiError('')
+
+    try {
+      const response = await fetch(
+        'https://nextgen-sih-2.onrender.com/explain',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            
+          },
+          body: JSON.stringify({
+            topic: question,
+            language: language,
+          }),
+        }
+      )
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`)
+      }
+
+      const data = await response.json()
+
+      setExplanation(data)
+      setAnalogy(data.analogy || '')
       setShowExplanation(true)
-    }, 1500)
+    } catch (error) {
+      console.error('Explain API error:', error)
+
+      setApiError(
+        'Unable to connect to the AI server. Please check whether the backend server is running.'
+      )
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   // Quiz
@@ -153,6 +195,13 @@ function App() {
               </div>
             </div>
 
+            {/* API Error */}
+            {apiError && (
+              <div className="mt-5 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                ⚠️ {apiError}
+              </div>
+            )}
+
             {/* Simple Explanation */}
             <div className="mt-6 rounded-2xl bg-blue-50 p-5">
               <div className="flex items-center gap-2">
@@ -164,10 +213,7 @@ function App() {
               </div>
 
               <p className="mt-3 leading-7 text-slate-700">
-                You asked this question in {language}. A simple,
-                student-friendly explanation will be generated here.
-                The AI will explain the concept in an easy way so that
-                it is simple to understand and remember.
+                {explanation?.simple || 'No explanation available.'}
               </p>
             </div>
 
@@ -182,33 +228,26 @@ function App() {
               </div>
 
               <div className="mt-4 space-y-3">
-                <div className="flex gap-3 rounded-xl bg-white p-3 shadow-sm">
-                  <span className="font-bold text-purple-600">1</span>
-                  <span className="text-slate-700">
-                    Understand the main concept.
-                  </span>
-                </div>
+                {explanation?.steps?.length > 0 ? (
+                  explanation.steps.map((step, index) => (
+                    <div
+                      key={index}
+                      className="flex gap-3 rounded-xl bg-white p-3 shadow-sm"
+                    >
+                      <span className="font-bold text-purple-600">
+                        {index + 1}
+                      </span>
 
-                <div className="flex gap-3 rounded-xl bg-white p-3 shadow-sm">
-                  <span className="font-bold text-purple-600">2</span>
-                  <span className="text-slate-700">
-                    Break the concept into simple parts.
-                  </span>
-                </div>
-
-                <div className="flex gap-3 rounded-xl bg-white p-3 shadow-sm">
-                  <span className="font-bold text-purple-600">3</span>
-                  <span className="text-slate-700">
-                    Connect it with an easy real-life example.
-                  </span>
-                </div>
-
-                <div className="flex gap-3 rounded-xl bg-white p-3 shadow-sm">
-                  <span className="font-bold text-purple-600">4</span>
-                  <span className="text-slate-700">
-                    Review the concept and remember the key points.
-                  </span>
-                </div>
+                      <span className="text-slate-700">
+                        {step}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="rounded-xl bg-white p-3 text-slate-600">
+                    No step-by-step explanation available.
+                  </div>
+                )}
               </div>
             </div>
 
@@ -248,9 +287,7 @@ function App() {
               </div>
 
               <p className="mt-3 leading-7 text-slate-700">
-                The AI will provide a simple real-life example related
-                to your question. This helps you connect the concept
-                with something familiar and remember it more easily.
+                {analogy || 'No example available.'}
               </p>
             </div>
 
@@ -271,6 +308,8 @@ function App() {
               </p>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
+
+                {/* Movie */}
                 <div className="rounded-2xl bg-white p-5 shadow-sm transition hover:shadow-md">
                   <div className="text-3xl">🎥</div>
 
@@ -284,6 +323,7 @@ function App() {
                   </p>
                 </div>
 
+                {/* Song */}
                 <div className="rounded-2xl bg-white p-5 shadow-sm transition hover:shadow-md">
                   <div className="text-3xl">🎵</div>
 
@@ -296,6 +336,7 @@ function App() {
                     remember important ideas in a creative way.
                   </p>
                 </div>
+
               </div>
             </div>
 
@@ -310,8 +351,10 @@ function App() {
               </div>
 
               <div className="mt-5 space-y-3">
+
                 <div className="flex items-center gap-3 rounded-xl bg-white p-3">
                   <span className="text-xl">✅</span>
+
                   <span className="text-slate-700">
                     Question understood
                   </span>
@@ -319,6 +362,7 @@ function App() {
 
                 <div className="flex items-center gap-3 rounded-xl bg-white p-3">
                   <span className="text-xl">✅</span>
+
                   <span className="text-slate-700">
                     Simple explanation
                   </span>
@@ -326,6 +370,7 @@ function App() {
 
                 <div className="flex items-center gap-3 rounded-xl bg-white p-3">
                   <span className="text-xl">✅</span>
+
                   <span className="text-slate-700">
                     Step-by-step explanation
                   </span>
@@ -333,10 +378,12 @@ function App() {
 
                 <div className="flex items-center gap-3 rounded-xl bg-white p-3">
                   <span className="text-xl">⏳</span>
+
                   <span className="text-slate-700">
                     Practice quiz
                   </span>
                 </div>
+
               </div>
             </div>
 
@@ -375,7 +422,7 @@ function App() {
               {quizChecked && (
                 <div className="mt-4 rounded-xl bg-white p-4 text-sm text-slate-700">
                   🤖 Your answer will be evaluated by AI when the
-                  backend is connected.
+                  quiz backend is connected.
                 </div>
               )}
             </div>
@@ -414,11 +461,12 @@ function App() {
 
               {followUpSent && (
                 <div className="mt-4 rounded-xl bg-white p-4 text-sm text-slate-700">
-                  🤖 Your follow-up question will be answered by AI
-                  when the backend is connected.
+                  🤖 Your follow-up question will be connected to the
+                  AI backend in the next integration step.
                 </div>
               )}
             </div>
+
           </div>
         </div>
       </div>
@@ -541,6 +589,7 @@ function App() {
               ? '🤔 Thinking...'
               : '✨ Ask AI'}
           </button>
+
         </div>
 
         {/* Features */}
@@ -588,6 +637,7 @@ function App() {
         <p className="mt-8 text-center text-sm text-slate-400">
           NEXTGEN • AI-powered multilingual learning assistant
         </p>
+
       </div>
     </div>
   )
