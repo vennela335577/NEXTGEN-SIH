@@ -1,4 +1,14 @@
 import { useState } from 'react'
+const EXPLAIN_API =
+  'https://nextgen-sih-2.onrender.com/explain'
+
+const DETECT_LANGUAGE_API =
+  'https://confidential-discharge-sage-venice.trycloudflare.com/detect-language'
+const languageMap = {
+  en: 'English',
+  te: 'Telugu',
+  hi: 'Hindi',
+}
 
 function App() {
   const [isListening, setIsListening] = useState(false)
@@ -90,6 +100,28 @@ function App() {
     setApiError('')
 
     try {
+      const detectResponse = await fetch(DETECT_LANGUAGE_API, {
+       method: 'POST',
+       headers: {
+        'Content-Type': 'application/json',
+       },
+       body: JSON.stringify({
+        text: question,
+        manual_language: null,
+       }),
+      })
+
+      if (!detectResponse.ok) {
+        throw new Error(
+          `Language detection error: ${detectResponse.status}`
+        )
+      }
+
+      const detectData = await detectResponse.json()
+
+      const detectedLanguage =
+         languageMap[detectData.detected_language] || language
+      setLanguage(detectedLanguage)
       const response = await fetch(
         'https://nextgen-sih-2.onrender.com/explain',
         {
@@ -100,7 +132,7 @@ function App() {
           },
           body: JSON.stringify({
             topic: question,
-            language: language,
+            language: detectedLanguage,
           }),
         }
       )
