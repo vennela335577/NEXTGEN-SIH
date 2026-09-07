@@ -1,0 +1,212 @@
+[
+  {
+    "concept": "Newton's Third Law",
+    "related_content": [
+      {
+        "title": "Rocket Launch",
+        "youtube_url": "https://youtu.be/SPZJFnym8Q0?si=HlNwhDYVW-GfHLqP",
+        "timestamp_start": "0:32",
+        "timestamp_end": "0:38",
+        "scene_explanation": "The rocket launches upward as powerful gases are expelled downward from its engines.",
+        "concept_connection": "According to Newton's Third Law, every action has an equal and opposite reaction. As the rocket pushes exhaust gases downward, an equal and opposite force pushes the rocket upward."
+      },
+      {
+        "title": "Ball Bouncing and Swimming",
+        "youtube_url": "https://youtu.be/dCF--YOjiOw?si=9XRqC820QnIc2Vuu",
+        "timestamp_start": "0:44",
+        "timestamp_end": "0:50",
+        "scene_explanation": "The scene shows a ball bouncing upward after hitting the ground and a swimmer pushing water backward to move forward.",
+        "concept_connection": "When the ball hits the ground, the ground exerts an equal and opposite force that pushes the ball upward. Similarly, when a swimmer pushes water backward, the water pushes the swimmer forward."
+      }
+    ]
+  },
+  {
+    "concept": "Volcanoes and Earthquakes",
+    "related_content": [
+      {
+        "title": "Volcanic Eruption",
+        "youtube_url": "https://youtu.be/S1Kbym7WYzs?si=IQm_WKMT9kKLuL4E",
+        "timestamp_start": "1:26",
+        "timestamp_end": "2:30",
+        "scene_explanation": "The scene shows a powerful volcanic eruption, with the ground breaking apart and molten material erupting from the Earth.",
+        "concept_connection": "Volcanoes form when molten rock, gases, and pressure from inside the Earth are released through openings in the Earth's crust."
+      },
+      {
+        "title": "Earthquake Destruction",
+        "youtube_url": "https://youtu.be/t6mDtqXtYCo?si=7wsVxqOhIjUVcbjd",
+        "timestamp_start": "2:20",
+        "timestamp_end": "3:02",
+        "scene_explanation": "The scene shows the ground and roads breaking apart as buildings and surrounding structures are affected by a powerful earthquake.",
+        "concept_connection": "Earthquakes occur when sudden movements within the Earth's crust release energy, causing the ground to shake."
+      }
+    ]
+  },
+  {
+    "concept": "Light and Reflection",
+    "related_content": [
+      {
+        "title": "Reflection Through Mirrors",
+        "youtube_url": "https://youtu.be/kN2UjCFGdY0?si=psrDnaZtCiZO2JM",
+        "timestamp_start": "1:02",
+        "timestamp_end": "1:23",
+        "scene_explanation": "The scene shows an image being reflected through a series of mirrors and becoming visible on a cloth in another location.",
+        "concept_connection": "Reflection occurs when light strikes a mirror and changes direction. Multiple mirrors can guide reflected light along different paths, allowing an image to be seen elsewhere."
+      },
+      {
+        "title": "Reflection on Water",
+        "youtube_url": "https://youtu.be/saRPCTmnaSw?si=zvKvNt9oU-mjUsQX",
+        "timestamp_start": "2:10",
+        "timestamp_end": "2:18",
+        "scene_explanation": "The scene shows a person looking into the water and seeing their image reflected on the water's surface.",
+        "concept_connection": "Reflection occurs when light strikes a smooth surface and bounces back. A calm water surface can reflect light and form a visible image."
+      }
+    ]
+  },
+  {
+    "concept": "Magnetism",
+    "related_content": [
+      {
+        "title": "Magnetic Attraction of Metal Objects",
+        "youtube_url": "https://youtu.be/xojgT5L2cDc?si=ky8q8r8ZzXme4nnR",
+        "timestamp_start": "7:50",
+        "timestamp_end": "8:25",
+        "scene_explanation": "The scene shows metal objects being attracted toward Chitti by a strong magnetic force.",
+        "concept_connection": "Magnetism is a force that can attract certain magnetic materials, such as iron, without direct physical contact."
+      },
+      {
+        "title": "Magnetic Attraction and Repulsion",
+        "youtube_url": "https://youtube.com/shorts/Qy4q9lqTTMY?si=mssk9oJVMxI1FaN8",
+        "timestamp_start": "0:00",
+        "timestamp_end": "0:14",
+        "scene_explanation": "The scene demonstrates two magnets interacting through attraction and repulsion.",
+        "concept_connection": "Unlike poles attract each other, while like poles repel each other."
+      }
+    ]
+  },
+  {
+    "concept": "Equality and Social Discrimination",
+    "related_content": [
+      {
+        "title": "Social Discrimination",
+        "youtube_url": "https://youtu.be/DvZMKC96Utk?si=5V8VI7ebkS6G5ba6",
+        "timestamp_start": "0:30",
+        "timestamp_end": "1:26",
+        "scene_explanation": "The scene shows people being insulted and treated unfairly because of their skin colour and background.",
+        "concept_connection": "Social discrimination occurs when people are treated unfairly or differently because of characteristics such as their race, background, or social identity."
+      },
+      {
+        "title": "Equality and Social Inclusion",
+        "youtube_url": "https://youtu.be/iPiqZ1NrA5o?si=fFiyIlcCUzlIoSr8",
+        "timestamp_start": "4:17",
+        "timestamp_end": "4:45",
+        "scene_explanation": "The scene shows a person interacting warmly and respectfully with people from different social backgrounds without treating anyone as inferior.",
+        "concept_connection": "Equality and social inclusion mean treating all people with dignity, respect, and fairness regardless of their social background or status."
+      }
+    ]
+  },
+  {
+    "concept": "Climate Change",
+    "related_content": [
+      {
+        "title": "Effects of Climate Change",
+        "youtube_url": "https://youtu.be/mjw8KdCBHsc?si=YoH-D2QkySG1E8rO",
+        "timestamp_start": "0:00",
+        "timestamp_end": "0:40",
+        "scene_explanation": "The scene visually shows environmental changes and the effects caused by changes in Earth's climate.",
+        "concept_connection": "Climate change refers to long-term changes in Earth's temperature and weather patterns, which can affect ecosystems and the environment."
+      },
+      {
+        "title": "Environmental Impact of Climate Change",
+        "youtube_url": "https://youtu.be/G4H1N_yXBiA?si=HRldK39G007n_YqK",
+        "timestamp_start": "1:12",
+        "timestamp_end": "2:04",
+        "scene_explanation": "The scene shows the effects of changing environmental conditions on the Earth and its natural systems.",
+        "concept_connection": "Rising global temperatures can contribute to major environmental changes, including extreme weather and changes to natural ecosystems."
+      }
+    ]
+  },
+  {
+    "concept": "Artificial Intelligence",
+    "related_content": [
+      {
+        "title": "AI Processing and Learning",
+        "youtube_url": "https://youtu.be/U0hejW_9hF4?si=lkR6ShYjePYsHdG9",
+        "timestamp_start": "0:58",
+        "timestamp_end": "1:16",
+        "scene_explanation": "The scene shows an artificial intelligence system processing information and responding using advanced technology.",
+        "concept_connection": "Artificial Intelligence enables computer systems to process information, identify patterns, and perform intelligent tasks."
+      },
+      {
+        "title": "AI Assistant Interaction",
+        "youtube_url": "https://youtu.be/rt1dBr2Jz78?si=u8fUiXV3cN3L7Dra",
+        "timestamp_start": "1:20",
+        "timestamp_end": "2:00",
+        "scene_explanation": "The scene shows an AI-based system interacting with and responding to a person.",
+        "concept_connection": "AI systems can use technologies such as Natural Language Processing to understand and respond to human communication."
+      }
+    ]
+  },
+  {
+    "concept": "Robotics",
+    "related_content": [
+      {
+        "title": "Automated Suit Assembly",
+        "youtube_url": "https://youtu.be/t86sKsR4pnk?si=oeB9quYD0Nl5Pd-V",
+        "timestamp_start": "1:10",
+        "timestamp_end": "2:00",
+        "scene_explanation": "The scene shows automated robotic systems assembling and attaching different parts of a suit without manual assistance.",
+        "concept_connection": "Robotics involves using programmed machines and automated systems to perform tasks accurately and efficiently."
+      },
+      {
+        "title": "Automated Cleaning Robot",
+        "youtube_url": "https://youtu.be/nLx_7wEmwms?si=nd4FZlfA956BieTi",
+        "timestamp_start": "1:40",
+        "timestamp_end": "2:06",
+        "scene_explanation": "The robot moves through a trash-filled environment, collects waste, compresses it into cubes, and continues its cleaning task automatically.",
+        "concept_connection": "Robots can be programmed to perform repetitive tasks automatically and operate in their environment."
+      }
+    ]
+  },
+  {
+    "concept": "Photosynthesis",
+    "related_content": [
+      {
+        "title": "Photosynthesis Process",
+        "youtube_url": "https://youtu.be/Y5dRycQMHk0?feature=shared",
+        "timestamp_start": "0:12",
+        "timestamp_end": "1:02",
+        "scene_explanation": "The scene visually shows sunlight, water, and carbon dioxide being used by plants to produce food and oxygen.",
+        "concept_connection": "Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to make food and release oxygen."
+      },
+      {
+        "title": "Oxygen Release During Photosynthesis",
+        "youtube_url": "https://youtube.com/shorts/35SIa6d-beU?si=ShxVSNMLgTzTvl3X",
+        "timestamp_start": "0:00",
+        "timestamp_end": "0:16",
+        "scene_explanation": "The scene shows a plant in water releasing bubbles that rise to the surface.",
+        "concept_connection": "During photosynthesis, plants produce oxygen as a by-product, which can be observed as bubbles in aquatic plants."
+      }
+    ]
+  },
+  {
+    "concept": "Electricity and Circuits",
+    "related_content": [
+      {
+        "title": "Using Electricity During a Power Emergency",
+        "youtube_url": "https://youtu.be/0qmazUYTYGM?si=uGsqY1ttpcZP4kQt",
+        "timestamp_start": "4:20",
+        "timestamp_end": "5:47",
+        "scene_explanation": "The scene shows an emergency situation where batteries and electrical power are arranged to operate equipment after a power interruption.",
+        "concept_connection": "Electrical energy from a power source can be used to operate devices when a complete electrical connection is established."
+      },
+      {
+        "title": "Simple Electric Circuit",
+        "youtube_url": "https://youtu.be/x4pdzG-DHnY?si=wxiIlGqA_2F9gAQ2",
+        "timestamp_start": "0:40",
+        "timestamp_end": "1:02",
+        "scene_explanation": "The video demonstrates a battery, wires, switch, and bulb. When the circuit is complete, the bulb lights up, and when the switch is opened, the bulb turns off.",
+        "concept_connection": "Electric current flows only through a complete circuit. Opening the circuit stops the flow of electricity."
+      }
+    ]
+  }
+]
