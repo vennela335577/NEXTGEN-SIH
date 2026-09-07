@@ -4,3 +4,4 @@ langdetect
 pydantic
 deep-translator
 requests
+pytest

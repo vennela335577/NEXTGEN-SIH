@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.detector import detect_language
 from app.translator import translate_text
@@ -6,6 +7,13 @@ from app.connector import get_explanation_from_llm
 
 app = FastAPI(title="Language Detection & Multilingual Handling")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class DetectRequest(BaseModel):
     text: str
