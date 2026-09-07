@@ -9,6 +9,7 @@ const detectLanguageRoute = require("./routes/detectLanguage");
 const topicsRoute = require("./routes/topics");
 const progressRoute = require("./routes/progress");
 const usersRoute = require("./routes/users");
+const matchContentRoute = require("./routes/matchContent");
 
 // Database
 const connectDB = require("./services/database");
@@ -28,6 +29,7 @@ app.use("/detect-language", detectLanguageRoute);
 app.use("/topics", topicsRoute);
 app.use("/progress", progressRoute);
 app.use("/users", usersRoute);
+app.use("/match-content", matchContentRoute);
 
 // Home route
 app.get("/", (req, res) => {
