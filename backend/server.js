@@ -34,7 +34,8 @@ app.use("/match-content", matchContentRoute);
 // Home route
 app.get("/", (req, res) => {
   res.json({
-    message: "NEXTGEN Backend is running!"
+    message: "NEXTGEN Backend is running!",
+    version: "ROMAN-TELUGU-TEST-1"
   });
 });
 
