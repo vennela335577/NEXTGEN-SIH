@@ -10,6 +10,7 @@ const topicsRoute = require("./routes/topics");
 const progressRoute = require("./routes/progress");
 const usersRoute = require("./routes/users");
 const matchContentRoute = require("./routes/matchContent");
+const contentRoute = require("./routes/content");
 
 // Database
 const connectDB = require("./services/database");
@@ -30,6 +31,7 @@ app.use("/topics", topicsRoute);
 app.use("/progress", progressRoute);
 app.use("/users", usersRoute);
 app.use("/match-content", matchContentRoute);
+app.use("/content", contentRoute);
 
 // Home route
 app.get("/", (req, res) => {
