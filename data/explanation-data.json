@@ -1,0 +1,361 @@
+{
+  "newton's third law": {
+    "English": {
+      "simple": "Newton's Third Law says that whenever one object applies a force on another object, the second object applies an equal force in the opposite direction.",
+      "steps": [
+        "One object applies a force on another object.",
+        "The second object also applies a force back.",
+        "Both forces have the same magnitude.",
+        "The two forces act in opposite directions.",
+        "The forces act on two different objects."
+      ],
+      "analogy": "It is like pushing a wall. You push the wall, and the wall pushes back on your hand with an equal force."
+    },
+    "Telugu": {
+      "simple": "Newton's Third Law prakaram, oka object vere object meeda force apply chesthe, second object kuda equal force ni opposite direction lo apply chestundi.",
+      "steps": [
+        "Oka object vere object meeda force apply chestundi.",
+        "Second object kuda force ni back apply chestundi.",
+        "Rendu forces magnitude equal ga untayi.",
+        "Rendu forces opposite directions lo untayi.",
+        "Aa forces rendu different objects meeda act chestayi."
+      ],
+      "analogy": "Idi wall ni push cheyyadam laantidi. Manam wall ni push chesthe, wall kuda mana hand meeda equal force tho back push chestundi."
+    },
+    "Hindi": {
+      "simple": "Newton's Third Law kehta hai ki jab ek object doosre object par force lagata hai, to doosra object bhi equal force opposite direction mein lagata hai.",
+      "steps": [
+        "Ek object doosre object par force lagata hai.",
+        "Doosra object bhi force ko wapas apply karta hai.",
+        "Dono forces ki magnitude equal hoti hai.",
+        "Dono forces opposite directions mein hoti hain.",
+        "Dono forces different objects par act karti hain."
+      ],
+      "analogy": "Yeh wall ko push karne jaisa hai. Jab hum wall ko push karte hain, wall bhi hamare hand par equal force se push back karti hai."
+    }
+  },
+
+  "volcanoes and earthquakes": {
+    "English": {
+      "simple": "Volcanoes and earthquakes are natural events caused mainly by movements and changes inside the Earth's crust.",
+      "steps": [
+        "Earth's outer layer is divided into tectonic plates.",
+        "These plates slowly move over time.",
+        "Plate movements can build up pressure.",
+        "Sudden release of this pressure can cause earthquakes.",
+        "Magma reaching the surface through openings can cause volcanic eruptions."
+      ],
+      "analogy": "It is like pieces of a giant puzzle moving against each other. When pressure builds up and suddenly releases, the ground can shake."
+    },
+    "Telugu": {
+      "simple": "Volcanoes mariyu earthquakes Earth crust lopala jarige movements mariyu changes valla mainly occur ayye natural events.",
+      "steps": [
+        "Earth outer layer tectonic plates ga divide ayi untundi.",
+        "Ee plates slow ga move avutayi.",
+        "Plate movements valla pressure build avvachu.",
+        "Aa pressure sudden ga release ayithe earthquake ravachu.",
+        "Magma surface ki openings dwara vasthe volcanic eruption jaragachu."
+      ],
+      "analogy": "Idi giant puzzle pieces okadanito okati move avvadam laantidi. Pressure ekkuva ayyi sudden ga release ayithe ground shake avvachu."
+    },
+    "Hindi": {
+      "simple": "Volcanoes aur earthquakes natural events hain jo mainly Earth ki crust ke andar movements aur changes ki wajah se hote hain.",
+      "steps": [
+        "Earth ki outer layer tectonic plates mein divided hoti hai.",
+        "Yeh plates dheere dheere move karti hain.",
+        "Plate movements ki wajah se pressure build ho sakta hai.",
+        "Pressure suddenly release hone par earthquake aa sakta hai.",
+        "Magma openings ke through surface par aaye to volcanic eruption ho sakta hai."
+      ],
+      "analogy": "Yeh ek giant puzzle ke pieces ke ek doosre ke against move karne jaisa hai. Pressure build hokar suddenly release ho to ground shake ho sakti hai."
+    }
+  },
+
+  "light and reflection": {
+    "English": {
+      "simple": "Reflection is the bouncing back of light when it strikes a surface.",
+      "steps": [
+        "Light travels from a source toward a surface.",
+        "The light reaches the surface.",
+        "Some or all of the light bounces back.",
+        "The reflected light travels toward our eyes.",
+        "Our brain interprets the reflected light and we see the object."
+      ],
+      "analogy": "It is like a ball bouncing back after hitting a wall. Light also bounces back when it hits a suitable surface."
+    },
+    "Telugu": {
+      "simple": "Reflection ante light oka surface ni hit chesinappudu back ki bounce avvadam.",
+      "steps": [
+        "Light source nundi surface vaipu travel avutundi.",
+        "Light surface ni reach avutundi.",
+        "Light lo kontha leda motham part back ki bounce avutundi.",
+        "Reflected light mana eyes vaipu travel avutundi.",
+        "Mana brain reflected light ni process chesi object ni chustundi."
+      ],
+      "analogy": "Idi wall ki ball ni throw chesthe ball back ki bounce avvadam laantidi. Light kuda suitable surface ni hit chesthe back ki bounce avutundi."
+    },
+    "Hindi": {
+      "simple": "Reflection ka matlab hai light ka kisi surface se takrakar wapas bounce hona.",
+      "steps": [
+        "Light source se surface ki taraf travel karti hai.",
+        "Light surface tak pahunchti hai.",
+        "Light ka kuch ya poora part wapas bounce hota hai.",
+        "Reflected light hamari eyes ki taraf travel karti hai.",
+        "Hamari brain reflected light ko process karke object ko dekhta hai."
+      ],
+      "analogy": "Yeh wall se ball bounce hone jaisa hai. Light bhi suitable surface se takrakar wapas bounce hoti hai."
+    }
+  },
+
+  "magnetism": {
+    "English": {
+      "simple": "Magnetism is a force that allows magnets to attract or repel certain materials and other magnets.",
+      "steps": [
+        "A magnet has a magnetic field around it.",
+        "The magnetic field can exert forces on magnetic materials.",
+        "Opposite magnetic poles attract each other.",
+        "Like magnetic poles repel each other.",
+        "Magnetism is used in many devices such as motors, speakers, and generators."
+      ],
+      "analogy": "It is like an invisible force field around a magnet that can pull or push other magnetic objects."
+    },
+    "Telugu": {
+      "simple": "Magnetism ante magnets konni materials ni mariyu vere magnets ni attract leda repel cheyyadaniki allow chese force.",
+      "steps": [
+        "Magnet chuttu magnetic field untundi.",
+        "Ee magnetic field magnetic materials meeda force apply cheyyagaladu.",
+        "Opposite magnetic poles okadanini okati attract chestayi.",
+        "Same magnetic poles okadanini okati repel chestayi.",
+        "Motors, speakers mariyu generators lanti devices lo magnetism use chestaru."
+      ],
+      "analogy": "Idi magnet chuttu unna invisible force field laantidi. Adi vere magnetic objects ni pull leda push cheyyagaladu."
+    },
+    "Hindi": {
+      "simple": "Magnetism ek force hai jo magnets ko kuch materials aur doosre magnets ko attract ya repel karne mein help karti hai.",
+      "steps": [
+        "Magnet ke around magnetic field hota hai.",
+        "Magnetic field magnetic materials par force laga sakta hai.",
+        "Opposite magnetic poles ek doosre ko attract karte hain.",
+        "Same magnetic poles ek doosre ko repel karte hain.",
+        "Motors, speakers aur generators jaise devices mein magnetism use hota hai."
+      ],
+      "analogy": "Yeh magnet ke around ek invisible force field jaisa hai jo doosre magnetic objects ko pull ya push kar sakta hai."
+    }
+  },
+
+  "equality and social discrimination": {
+    "English": {
+      "simple": "Equality means giving every person equal rights, opportunities, and respect regardless of their background.",
+      "steps": [
+        "Every person should have equal basic rights.",
+        "People should get fair opportunities.",
+        "Discrimination can prevent people from getting equal opportunities.",
+        "Respect should be given to everyone.",
+        "Fair treatment helps create an inclusive society."
+      ],
+      "analogy": "It is like giving every student the same chance to participate in a race instead of choosing winners based on their background."
+    },
+    "Telugu": {
+      "simple": "Equality ante person's background tho sambandham lekunda andariki equal rights, opportunities mariyu respect ivvadam.",
+      "steps": [
+        "Prathi person ki equal basic rights undali.",
+        "Andariki fair opportunities dorakali.",
+        "Discrimination valla equal opportunities miss avvachu.",
+        "Prathi okkariki respect ivvali.",
+        "Fair treatment inclusive society ni create cheyyadaniki help chestundi."
+      ],
+      "analogy": "Idi race lo prathi student ki same chance ivvadam laantidi. Background batti winner ni decide cheyyakudadhu."
+    },
+    "Hindi": {
+      "simple": "Equality ka matlab hai har person ko unke background ki parwah kiye bina equal rights, opportunities aur respect dena.",
+      "steps": [
+        "Har person ko equal basic rights milne chahiye.",
+        "Sabko fair opportunities milni chahiye.",
+        "Discrimination ki wajah se equal opportunities nahi mil sakti hain.",
+        "Har person ko respect dena chahiye.",
+        "Fair treatment ek inclusive society banane mein help karta hai."
+      ],
+      "analogy": "Yeh race mein har student ko same chance dene jaisa hai, na ki unke background ke basis par winner choose karna."
+    }
+  },
+
+  "climate change": {
+    "English": {
+      "simple": "Climate change is the long-term change in Earth's temperatures and weather patterns, largely influenced today by human activities.",
+      "steps": [
+        "Human activities release greenhouse gases into the atmosphere.",
+        "Greenhouse gases trap heat around Earth.",
+        "More trapped heat can increase global temperatures.",
+        "Changing temperatures can affect weather patterns and ecosystems.",
+        "Reducing emissions and using cleaner energy can help reduce the impact."
+      ],
+      "analogy": "It is like adding extra layers to a blanket around Earth. More layers can trap more heat."
+    },
+    "Telugu": {
+      "simple": "Climate change ante Earth temperatures mariyu weather patterns lo long-term changes. Present time lo human activities kuda important role play chestunnayi.",
+      "steps": [
+        "Human activities valla greenhouse gases atmosphere loki release avutayi.",
+        "Greenhouse gases Earth chuttu heat ni trap chestayi.",
+        "Ekkuva heat trap avvadam valla global temperatures increase avvachu.",
+        "Temperature changes weather patterns mariyu ecosystems ni affect cheyyachu.",
+        "Emissions reduce cheyyadam mariyu clean energy use cheyyadam impact ni tagginchadaniki help chestayi."
+      ],
+      "analogy": "Idi Earth chuttu extra blanket layers add cheyyadam laantidi. Ekkuva layers ekkuva heat ni trap chestayi."
+    },
+    "Hindi": {
+      "simple": "Climate change ka matlab Earth ke temperatures aur weather patterns mein long-term changes hain, jin par aaj human activities ka bhi important effect hai.",
+      "steps": [
+        "Human activities ki wajah se greenhouse gases atmosphere mein release hoti hain.",
+        "Greenhouse gases Earth ke around heat ko trap karti hain.",
+        "Zyada heat trap hone se global temperatures increase ho sakte hain.",
+        "Temperature changes weather patterns aur ecosystems ko affect kar sakte hain.",
+        "Emissions reduce karna aur clean energy use karna impact ko kam karne mein help karta hai."
+      ],
+      "analogy": "Yeh Earth ke around extra blanket layers add karne jaisa hai. Zyada layers zyada heat trap karti hain."
+    }
+  },
+
+  "artificial intelligence": {
+    "English": {
+      "simple": "Artificial Intelligence is the ability of computer systems to perform tasks that normally require human intelligence, such as understanding, learning, and decision-making.",
+      "steps": [
+        "Data is collected and provided to an AI system.",
+        "The system processes the data using algorithms or models.",
+        "It identifies patterns or useful information.",
+        "The system uses what it learned to make predictions or decisions.",
+        "The result is provided to the user or another system."
+      ],
+      "analogy": "It is like teaching a student using many examples. After learning the patterns, the student can use them to answer new questions."
+    },
+    "Telugu": {
+      "simple": "Artificial Intelligence ante computers human intelligence avasaram ayye tasks ni perform cheyyagalige technology, like understanding, learning mariyu decision-making.",
+      "steps": [
+        "Data ni collect chesi AI system ki provide chestaru.",
+        "System algorithms leda models use chesi data ni process chestundi.",
+        "System patterns mariyu useful information ni identify chestundi.",
+        "Learn chesina information ni use cheskoni predictions leda decisions chestundi.",
+        "Result ni user ki leda vere system ki provide chestundi."
+      ],
+      "analogy": "Idi student ki chala examples tho teaching cheyyadam laantidi. Patterns nerchukunna tarvata student new questions ki answer cheyyagaladu."
+    },
+    "Hindi": {
+      "simple": "Artificial Intelligence ek technology hai jisme computer systems human intelligence ki zarurat wale tasks perform kar sakte hain, jaise understanding, learning aur decision-making.",
+      "steps": [
+        "Data collect karke AI system ko diya jata hai.",
+        "System algorithms ya models ka use karke data process karta hai.",
+        "System patterns aur useful information identify karta hai.",
+        "Learn ki hui information ka use karke predictions ya decisions karta hai.",
+        "Result user ya kisi doosre system ko diya jata hai."
+      ],
+      "analogy": "Yeh ek student ko bahut saare examples se teach karne jaisa hai. Patterns seekhne ke baad student new questions ka answer de sakta hai."
+    }
+  },
+
+  "robotics": {
+    "English": {
+      "simple": "Robotics is the field of designing, building, programming, and controlling robots to perform tasks.",
+      "steps": [
+        "A robot is designed for a specific task.",
+        "Sensors collect information from the environment.",
+        "A controller or computer processes the information.",
+        "The robot decides or follows programmed actions.",
+        "Motors and other components perform the physical action."
+      ],
+      "analogy": "A robot is like a body with sensors as eyes and ears, a controller as the brain, and motors as muscles."
+    },
+    "Telugu": {
+      "simple": "Robotics ante tasks perform cheyyadaniki robots ni design, build, program mariyu control chese field.",
+      "steps": [
+        "Specific task kosam robot ni design chestaru.",
+        "Sensors environment nundi information collect chestayi.",
+        "Controller leda computer information ni process chestundi.",
+        "Robot programmed actions ni follow chestundi leda decision teesukuntundi.",
+        "Motors mariyu other components physical action perform chestayi."
+      ],
+      "analogy": "Robot ni body la imagine cheyyachu. Sensors eyes and ears laga, controller brain laga, motors muscles laga work chestayi."
+    },
+    "Hindi": {
+      "simple": "Robotics ek field hai jisme tasks perform karne ke liye robots ko design, build, program aur control kiya jata hai.",
+      "steps": [
+        "Specific task ke liye robot ko design kiya jata hai.",
+        "Sensors environment se information collect karte hain.",
+        "Controller ya computer information ko process karta hai.",
+        "Robot programmed actions follow karta hai ya decision leta hai.",
+        "Motors aur doosre components physical action perform karte hain."
+      ],
+      "analogy": "Robot ko ek body ki tarah samajh sakte hain. Sensors eyes aur ears, controller brain aur motors muscles ki tarah kaam karte hain."
+    }
+  },
+
+  "photosynthesis": {
+    "English": {
+      "simple": "Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to make their own food and release oxygen.",
+      "steps": [
+        "Plants absorb water from the soil through their roots.",
+        "Leaves take in carbon dioxide from the air.",
+        "Chlorophyll in the leaves captures sunlight energy.",
+        "The plant uses sunlight, water, and carbon dioxide to make glucose (food).",
+        "Oxygen is released into the air as a by-product."
+      ],
+      "analogy": "It is like a kitchen where sunlight provides the energy, water and carbon dioxide are the ingredients, and the plant's leaves act like the kitchen."
+    },
+    "Telugu": {
+      "simple": "Photosynthesis ante green plants sunlight, water mariyu carbon dioxide ni use cheskoni own food prepare cheskune process. Ee process lo oxygen release avutundi.",
+      "steps": [
+        "Plants roots dwara soil nundi water ni absorb chestayi.",
+        "Leaves air nundi carbon dioxide ni teesukuntayi.",
+        "Leaves lo unna chlorophyll sunlight energy ni capture chestundi.",
+        "Plant sunlight, water mariyu carbon dioxide ni use cheskoni glucose ane food ni prepare chestundi.",
+        "Oxygen by-product ga air loki release avutundi."
+      ],
+      "analogy": "Idi oka kitchen laantidi. Sunlight energy laga work chestundi, water mariyu carbon dioxide ingredients laga untayi, leaves kitchen laga work chestayi."
+    },
+    "Hindi": {
+      "simple": "Photosynthesis woh process hai jisme green plants sunlight, water aur carbon dioxide ka use karke apna food banate hain aur oxygen release karte hain.",
+      "steps": [
+        "Plants apni roots ke through soil se water absorb karte hain.",
+        "Leaves air se carbon dioxide lete hain.",
+        "Leaves mein chlorophyll sunlight ki energy ko capture karta hai.",
+        "Plant sunlight, water aur carbon dioxide ka use karke glucose yani food banata hai.",
+        "Oxygen by-product ke roop mein air mein release hota hai."
+      ],
+      "analogy": "Yeh ek kitchen ki tarah hai. Sunlight energy ka kaam karti hai, water aur carbon dioxide ingredients hain, aur leaves kitchen ki tarah kaam karte hain."
+    }
+  },
+
+  "electricity and circuits": {
+    "English": {
+      "simple": "An electric circuit is a closed path through which electric current can flow.",
+      "steps": [
+        "A source such as a battery provides electrical energy.",
+        "Wires provide a path for current to travel.",
+        "Components such as bulbs or motors use electrical energy.",
+        "The circuit must form a closed path for continuous current flow.",
+        "Opening the circuit breaks the path and stops the current."
+      ],
+      "analogy": "It is like water flowing through a closed pipe. The battery acts like a pump, wires act like pipes, and components use the energy."
+    },
+    "Telugu": {
+      "simple": "Electric circuit ante electric current flow avvadaniki closed path.",
+      "steps": [
+        "Battery lanti source electrical energy provide chestundi.",
+        "Wires current travel avvadaniki path provide chestayi.",
+        "Bulb leda motor lanti components electrical energy ni use chestayi.",
+        "Continuous current flow kosam circuit closed path ga undali.",
+        "Circuit open chesthe path break ayi current stop avutundi."
+      ],
+      "analogy": "Idi closed pipe lo water flow avvadam laantidi. Battery pump laga, wires pipes laga, components energy ni use chese parts laga work chestayi."
+    },
+    "Hindi": {
+      "simple": "Electric circuit ek closed path hai jisme electric current flow kar sakta hai.",
+      "steps": [
+        "Battery jaise source electrical energy provide karta hai.",
+        "Wires current ko travel karne ka path dete hain.",
+        "Bulb ya motor jaise components electrical energy use karte hain.",
+        "Continuous current flow ke liye circuit ka closed path hona zaroori hai.",
+        "Circuit open karne par path break hota hai aur current stop ho jata hai."
+      ],
+      "analogy": "Yeh closed pipe mein water flow hone jaisa hai. Battery pump ki tarah, wires pipes ki tarah aur components energy use karne wale parts ki tarah kaam karte hain."
+    }
+  }
+}

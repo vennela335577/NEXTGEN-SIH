@@ -6,10 +6,10 @@ const {
   normalizeLanguage
 } = require("../utils/normalize");
 
+const explanationData = require("../../data/explanation-data.json");
+
 const router = express.Router();
 
-
-// Retry helper for temporary Gemini errors
 async function generateWithRetry(prompt, maxRetries = 2) {
   let lastError;
 
@@ -19,33 +19,26 @@ async function generateWithRetry(prompt, maxRetries = 2) {
     } catch (error) {
       lastError = error;
 
-      const status = error?.status;
-
-      // 429 = quota/rate limit.
-      // Retrying immediately will not solve a quota problem.
-      if (status === 429) {
+      if (error?.status === 429) {
         throw error;
       }
 
-      // Retry only temporary server/network errors
       const temporaryError =
-        status === 500 ||
-        status === 502 ||
-        status === 503 ||
-        status === 504;
+        error?.status === 500 ||
+        error?.status === 502 ||
+        error?.status === 503 ||
+        error?.status === 504;
 
       if (!temporaryError || attempt === maxRetries) {
         throw error;
       }
 
-      // Short delay before retry
       await new Promise((resolve) => setTimeout(resolve, 2000));
     }
   }
 
   throw lastError;
 }
-
 
 router.post("/", async (req, res) => {
   try {
@@ -57,20 +50,83 @@ router.post("/", async (req, res) => {
       });
     }
 
-
-    // Normalize topic and language
     const normalizedTopic = normalizeTopic(topic);
     const normalizedLanguage = normalizeLanguage(language);
 
+    // Convert language name to JSON key
+    let languageKey;
 
-    // --------------------------------------------------
-    // STEP 1: CHECK MONGODB CACHE
-    // --------------------------------------------------
+    if (
+      normalizedLanguage === "english"
+    ) {
+      languageKey = "English";
+    } else if (
+      normalizedLanguage === "telugu" ||
+      normalizedLanguage === "roman telugu"
+    ) {
+      languageKey = "Telugu";
+    } else if (
+      normalizedLanguage === "hindi" ||
+      normalizedLanguage === "roman hindi"
+    ) {
+      languageKey = "Hindi";
+    } else {
+      languageKey = "English";
+    }
 
-    const cachedExplanation = await ExplanationCache.findOne({
-      topic: normalizedTopic,
-      language: normalizedLanguage
-    });
+    // =====================================================
+    // 1. CHECK PRE-STORED EXPLANATION DATA FIRST
+    // =====================================================
+
+    const storedExplanation =
+      explanationData[normalizedTopic]?.[languageKey];
+
+    if (storedExplanation) {
+      console.log(
+        `Stored Explanation HIT: ${normalizedTopic} - ${languageKey}`
+      );
+
+      // Also save it into MongoDB cache
+      // so future requests can use the cache.
+      try {
+        await ExplanationCache.findOneAndUpdate(
+          {
+            topic: normalizedTopic,
+            language: normalizedLanguage
+          },
+          {
+            topic: normalizedTopic,
+            language: normalizedLanguage,
+            response: storedExplanation
+          },
+          {
+            upsert: true,
+            new: true
+          }
+        );
+
+        console.log(
+          `Cache SEEDED: ${normalizedTopic} - ${normalizedLanguage}`
+        );
+      } catch (cacheError) {
+        console.error(
+          "Cache Seed Error:",
+          cacheError.message
+        );
+      }
+
+      return res.json(storedExplanation);
+    }
+
+    // =====================================================
+    // 2. CHECK MONGODB CACHE
+    // =====================================================
+
+    const cachedExplanation =
+      await ExplanationCache.findOne({
+        topic: normalizedTopic,
+        language: normalizedLanguage
+      });
 
     if (cachedExplanation) {
       console.log(
@@ -80,62 +136,45 @@ router.post("/", async (req, res) => {
       return res.json(cachedExplanation.response);
     }
 
-
     console.log(
       `Cache MISS: ${normalizedTopic} - ${normalizedLanguage}`
     );
 
-
-    // --------------------------------------------------
-    // STEP 2: LANGUAGE INSTRUCTION
-    // --------------------------------------------------
+    // =====================================================
+    // 3. USE GEMINI ONLY IF NOT STORED/CACHED
+    // =====================================================
 
     let languageInstruction = "";
 
-    if (normalizedLanguage === "telugu") {
+    if (languageKey === "Telugu") {
       languageInstruction = `
-IMPORTANT:
-Explain everything in Telugu language, but write Telugu using ONLY English
-alphabet letters (Roman Telugu / Tenglish).
+Explain everything in Telugu language, but write Telugu
+using ONLY English alphabet letters (Roman Telugu / Tenglish).
 
 Do NOT use Telugu script.
-Do NOT use Devanagari script.
-
-Example style:
-"Photosynthesis ante plants sunlight ni use cheskoni food prepare
-cheskune process."
-
-Keep technical terms such as photosynthesis, glucose, oxygen,
-voltage, current etc. in English when they are commonly used.
+Keep technical terms such as photosynthesis, glucose,
+oxygen, voltage, current etc. in English when commonly used.
 `;
-
-    } else if (normalizedLanguage === "hindi") {
+    } else if (languageKey === "Hindi") {
       languageInstruction = `
-Explain everything in Hindi language, but write Hindi using ONLY English
-alphabet letters (Roman Hindi).
+Explain everything in Hindi language, but write Hindi
+using ONLY English alphabet letters (Roman Hindi).
 
 Do NOT use Devanagari script.
-
-Keep technical terms such as photosynthesis, glucose, oxygen,
-voltage, current etc. in English when they are commonly used.
+Keep technical terms such as photosynthesis, glucose,
+oxygen, voltage, current etc. in English when commonly used.
 `;
-
     } else {
       languageInstruction = `
 Explain everything in simple English.
 `;
     }
 
-
-    // --------------------------------------------------
-    // STEP 3: GEMINI PROMPT
-    // --------------------------------------------------
-
     const prompt = `
 Explain the educational topic below in a simple way.
 
 Topic: ${normalizedTopic}
-Requested Language: ${normalizedLanguage}
+Requested Language: ${languageKey}
 
 ${languageInstruction}
 
@@ -161,13 +200,7 @@ Rules:
 - Follow the requested language format exactly
 - For Telugu, use ONLY English alphabet letters
 - For Hindi, use ONLY English alphabet letters
-- Do not write Telugu or Hindi script when Roman language is requested
 `;
-
-
-    // --------------------------------------------------
-    // STEP 4: CALL GEMINI WITH RETRY
-    // --------------------------------------------------
 
     let result;
 
@@ -176,56 +209,28 @@ Rules:
     } catch (error) {
       console.error("Gemini API Error:", error);
 
-
-      // ------------------------------------------------
-      // 429 QUOTA / RATE LIMIT FALLBACK
-      // ------------------------------------------------
-
       if (error?.status === 429) {
         return res.status(200).json({
           simple:
-            normalizedLanguage === "telugu"
+            languageKey === "Telugu"
               ? "Ee topic explanation ippudu temporarily available kaadu. Please konchem sepu tarvata try cheyyandi."
-              : normalizedLanguage === "hindi"
+              : languageKey === "Hindi"
               ? "Is topic ka explanation abhi temporarily available nahi hai. Kripya thodi der baad dobara try karein."
               : "This topic explanation is temporarily unavailable. Please try again shortly.",
 
           steps: [
-            normalizedLanguage === "telugu"
-              ? "Gemini service quota temporarily exhausted."
-              : normalizedLanguage === "hindi"
-              ? "Gemini service quota temporarily exhausted hai."
-              : "The AI service quota is temporarily exhausted.",
-
-            normalizedLanguage === "telugu"
-              ? "Your request was not lost."
-              : normalizedLanguage === "hindi"
-              ? "Aapki request lost nahi hui hai."
-              : "Your request was not lost.",
-
-            normalizedLanguage === "telugu"
-              ? "Please try again later."
-              : normalizedLanguage === "hindi"
-              ? "Kripya baad mein dobara try karein."
-              : "Please try again later."
+            "The AI service quota is temporarily exhausted.",
+            "Your request was not lost.",
+            "Please try again later."
           ],
 
           analogy:
-            normalizedLanguage === "telugu"
-              ? "Idi traffic ekkuva unna road laanti situation; konchem sepu tarvata malli try cheyyachu."
-              : normalizedLanguage === "hindi"
-              ? "Yeh zyada traffic wali road jaisi situation hai; thodi der baad dobara try kar sakte hain."
-              : "It is like a road with temporary heavy traffic; trying again later should help.",
+            "It is like a road with temporary heavy traffic; trying again later should help.",
 
           fallback: true,
           reason: "Gemini quota or rate limit exceeded"
         });
       }
-
-
-      // ------------------------------------------------
-      // TEMPORARY SERVER ERROR FALLBACK
-      // ------------------------------------------------
 
       if (
         error?.status === 500 ||
@@ -235,11 +240,7 @@ Rules:
       ) {
         return res.status(200).json({
           simple:
-            normalizedLanguage === "telugu"
-              ? "AI explanation service ippudu temporarily unavailable undi. Please konchem sepu tarvata try cheyyandi."
-              : normalizedLanguage === "hindi"
-              ? "AI explanation service abhi temporarily unavailable hai. Kripya thodi der baad try karein."
-              : "The AI explanation service is temporarily unavailable. Please try again shortly.",
+            "The AI explanation service is temporarily unavailable. Please try again shortly.",
 
           steps: [
             "The AI service could not process the request.",
@@ -255,18 +256,10 @@ Rules:
         });
       }
 
-
-      // Other unexpected Gemini errors
       return res.status(500).json({
-        error: "Failed to generate explanation",
-        message: "The AI service encountered an unexpected error."
+        error: "Failed to generate explanation"
       });
     }
-
-
-    // --------------------------------------------------
-    // STEP 5: PARSE GEMINI RESPONSE
-    // --------------------------------------------------
 
     const text = result.response.text();
 
@@ -280,15 +273,14 @@ Rules:
     try {
       explanation = JSON.parse(cleanText);
     } catch (parseError) {
-      console.error("Gemini JSON Parse Error:", parseError);
+      console.error(
+        "Gemini JSON Parse Error:",
+        parseError
+      );
 
       return res.status(200).json({
         simple:
-          normalizedLanguage === "telugu"
-            ? "Explanation format lo temporary problem vachindi. Please malli try cheyyandi."
-            : normalizedLanguage === "hindi"
-            ? "Explanation format mein temporary problem aayi hai. Kripya dobara try karein."
-            : "There was a temporary problem processing the explanation. Please try again.",
+          "There was a temporary problem processing the explanation. Please try again.",
 
         steps: [
           "The AI response was received.",
@@ -304,43 +296,46 @@ Rules:
       });
     }
 
-
-    // --------------------------------------------------
-    // STEP 6: SAVE SUCCESSFUL RESPONSE TO CACHE
-    // --------------------------------------------------
-
+    // Save Gemini-generated explanation to MongoDB
     try {
-      await ExplanationCache.create({
-        topic: normalizedTopic,
-        language: normalizedLanguage,
-        response: explanation
-      });
+      await ExplanationCache.findOneAndUpdate(
+        {
+          topic: normalizedTopic,
+          language: normalizedLanguage
+        },
+        {
+          topic: normalizedTopic,
+          language: normalizedLanguage,
+          response: explanation
+        },
+        {
+          upsert: true,
+          new: true
+        }
+      );
 
       console.log(
         `Cache SAVED: ${normalizedTopic} - ${normalizedLanguage}`
       );
-
     } catch (cacheError) {
-      // Do not fail the user's successful request
-      // just because saving cache failed.
-      console.error("Cache Save Error:", cacheError.message);
+      console.error(
+        "Cache Save Error:",
+        cacheError.message
+      );
     }
-
-
-    // --------------------------------------------------
-    // STEP 7: RETURN EXPLANATION
-    // --------------------------------------------------
 
     return res.json(explanation);
 
   } catch (error) {
-    console.error("Explanation Route Error:", error);
+    console.error(
+      "Explanation Route Error:",
+      error
+    );
 
     return res.status(500).json({
       error: "Failed to process explanation request"
     });
   }
 });
-
 
 module.exports = router;
