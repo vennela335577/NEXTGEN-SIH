@@ -1,9 +1,21 @@
 const express = require("express");
-const model = require("../services/gemini");
 
 const router = express.Router();
 
 const contentData = require("../../data/content-data.json");
+
+function normalizeTopic(topic) {
+  return topic
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function normalizeLanguage(language) {
+  return language
+    .toLowerCase()
+    .trim();
+}
 
 router.post("/", async (req, res) => {
   try {
@@ -15,8 +27,26 @@ router.post("/", async (req, res) => {
       });
     }
 
+    const normalizedConcept = normalizeTopic(concept);
+    const normalizedLanguage = normalizeLanguage(language);
+
+    let languageKey;
+
+    if (normalizedLanguage === "english") {
+      languageKey = "English";
+    } else if (normalizedLanguage === "telugu") {
+      languageKey = "Telugu";
+    } else if (normalizedLanguage === "hindi") {
+      languageKey = "Hindi";
+    } else {
+      return res.status(400).json({
+        error: "Supported languages are English, Telugu and Hindi"
+      });
+    }
+
     const matchedContent = contentData.find(
-      (item) => item.concept.toLowerCase() === concept.toLowerCase()
+      (item) =>
+        normalizeTopic(item.concept) === normalizedConcept
     );
 
     if (!matchedContent) {
@@ -27,107 +57,32 @@ router.post("/", async (req, res) => {
       });
     }
 
-    // English: return original content
-    if (language.toLowerCase() === "english") {
-      return res.json({
-        concept: matchedContent.concept,
-        found: true,
-        related_content: matchedContent.related_content
-      });
-    }
+    const relatedContent = matchedContent.related_content.map((item) => {
+      const sceneExplanation =
+        item.scene_explanation?.[languageKey] ??
+        item.scene_explanation?.English;
 
-    let languageInstruction = "";
+      const conceptConnection =
+        item.concept_connection?.[languageKey] ??
+        item.concept_connection?.English;
 
-    if (language.toLowerCase() === "telugu") {
-      languageInstruction = `
-Translate the explanations into Telugu.
-
-IMPORTANT:
-- Use ONLY English alphabet letters.
-- Use Roman Telugu / Tenglish only.
-- DO NOT use Telugu script.
-- Keep technical terms such as photosynthesis, sunlight,
-  carbon dioxide, oxygen and glucose in English when natural.
-- Keep the meaning accurate and beginner-friendly.
-`;
-    } else if (language.toLowerCase() === "hindi") {
-      languageInstruction = `
-Translate the explanations into Hindi.
-
-IMPORTANT:
-- Use ONLY English alphabet letters.
-- Use Roman Hindi only.
-- DO NOT use Devanagari script.
-- Keep technical terms such as photosynthesis, sunlight,
-  carbon dioxide, oxygen and glucose in English when natural.
-- Keep the meaning accurate and beginner-friendly.
-`;
-    } else {
-      return res.status(400).json({
-        error: "Supported languages are English, Telugu and Hindi"
-      });
-    }
-
-    const translatedContent = [];
-
-    for (const item of matchedContent.related_content) {
-      const prompt = `
-Translate the following two educational explanations into ${language}.
-
-${languageInstruction}
-
-Scene explanation:
-${item.scene_explanation}
-
-Concept connection:
-${item.concept_connection}
-
-Return ONLY valid JSON.
-Do not use markdown.
-Do not use code blocks.
-
-Use exactly this format:
-{
-  "scene_explanation": "...",
-  "concept_connection": "..."
-}
-
-Rules:
-- Translate only the two explanations.
-- Do not add extra information.
-- Preserve the original meaning.
-- Keep it short and clear.
-- For Telugu, use Roman Telugu only.
-- For Hindi, use Roman Hindi only.
-`;
-
-      const result = await model.generateContent(prompt);
-      const text = result.response.text();
-
-      const cleanText = text
-        .replace(/```json/g, "")
-        .replace(/```/g, "")
-        .trim();
-
-      const translated = JSON.parse(cleanText);
-
-      translatedContent.push({
+      return {
         ...item,
-        scene_explanation: translated.scene_explanation,
-        concept_connection: translated.concept_connection
-      });
-    }
+        scene_explanation: sceneExplanation,
+        concept_connection: conceptConnection
+      };
+    });
 
-    res.json({
+    return res.json({
       concept: matchedContent.concept,
       found: true,
-      related_content: translatedContent
+      related_content: relatedContent
     });
 
   } catch (error) {
     console.error("Content API Error:", error);
 
-    res.status(500).json({
+    return res.status(500).json({
       error: "Failed to process content"
     });
   }

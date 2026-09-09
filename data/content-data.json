@@ -7,16 +7,32 @@
         "youtube_url": "https://youtu.be/SPZJFnym8Q0?si=HlNwhDYVW-GfHLqP",
         "timestamp_start": "0:32",
         "timestamp_end": "0:38",
-        "scene_explanation": "The rocket launches upward as powerful gases are expelled downward from its engines.",
-        "concept_connection": "According to Newton's Third Law, every action has an equal and opposite reaction. As the rocket pushes exhaust gases downward, an equal and opposite force pushes the rocket upward."
+        "scene_explanation": {
+          "English": "The rocket launches upward as powerful gases are expelled downward from its engines.",
+          "Telugu": "Ee scene lo rocket powerful gases ni kinda ki release chestu paiki launch avuthundi.",
+          "Hindi": "Is scene mein rocket powerful gases ko neeche release karke upar launch hota hua dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "According to Newton's Third Law, every action has an equal and opposite reaction. As the rocket pushes exhaust gases downward, an equal and opposite force pushes the rocket upward.",
+          "Telugu": "Newton's Third Law prakaram, prati action ki equal mariyu opposite reaction untundi. Rocket exhaust gases ni kinda ki push chesthe, equal mariyu opposite force rocket ni paiki push chestundi.",
+          "Hindi": "Newton's Third Law ke according, har action ka equal aur opposite reaction hota hai. Rocket exhaust gases ko neeche push karta hai, isliye equal aur opposite force rocket ko upar push karta hai."
+        }
       },
       {
         "title": "Ball Bouncing and Swimming",
         "youtube_url": "https://youtu.be/dCF--YOjiOw?si=9XRqC820QnIc2Vuu",
         "timestamp_start": "0:44",
         "timestamp_end": "0:50",
-        "scene_explanation": "The scene shows a ball bouncing upward after hitting the ground and a swimmer pushing water backward to move forward.",
-        "concept_connection": "When the ball hits the ground, the ground exerts an equal and opposite force that pushes the ball upward. Similarly, when a swimmer pushes water backward, the water pushes the swimmer forward."
+        "scene_explanation": {
+          "English": "The scene shows a ball bouncing upward after hitting the ground and a swimmer pushing water backward to move forward.",
+          "Telugu": "Ee scene lo ball ground ni hit ayyaka paiki bounce avvadam, swimmer water ni venakki push chesi munduku move avvadam chupistundi.",
+          "Hindi": "Is scene mein ball ground se takrane ke baad upar bounce hoti hai aur swimmer water ko peeche push karke aage move karta hai."
+        },
+        "concept_connection": {
+          "English": "When the ball hits the ground, the ground exerts an equal and opposite force that pushes the ball upward. Similarly, when a swimmer pushes water backward, the water pushes the swimmer forward.",
+          "Telugu": "Ball ground ni hit chesinappudu, ground equal mariyu opposite force tho ball ni paiki push chestundi. Alage swimmer water ni venakki push chesthe, water swimmer ni munduku push chestundi.",
+          "Hindi": "Jab ball ground se takrati hai, ground equal aur opposite force se ball ko upar push karta hai. Isi tarah swimmer water ko peeche push karta hai aur water swimmer ko aage push karta hai."
+        }
       }
     ]
   },
@@ -28,16 +44,32 @@
         "youtube_url": "https://youtu.be/S1Kbym7WYzs?si=IQm_WKMT9kKLuL4E",
         "timestamp_start": "1:26",
         "timestamp_end": "2:30",
-        "scene_explanation": "The scene shows a powerful volcanic eruption, with the ground breaking apart and molten material erupting from the Earth.",
-        "concept_connection": "Volcanoes form when molten rock, gases, and pressure from inside the Earth are released through openings in the Earth's crust."
+        "scene_explanation": {
+          "English": "The scene shows a powerful volcanic eruption, with the ground breaking apart and molten material erupting from the Earth.",
+          "Telugu": "Ee scene lo powerful volcanic eruption, ground break avvadam mariyu Earth lopala nundi molten material bayataki ravatam chupistundi.",
+          "Hindi": "Is scene mein powerful volcanic eruption, ground ka tootna aur Earth ke andar se molten material ka bahar aana dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "Volcanoes form when molten rock, gases, and pressure from inside the Earth are released through openings in the Earth's crust.",
+          "Telugu": "Volcanoes Earth lopala unna molten rock, gases mariyu pressure openings dwara crust nundi bayataki release ayinappudu form avuthayi.",
+          "Hindi": "Volcanoes tab bante hain jab Earth ke andar ka molten rock, gases aur pressure openings ke through Earth's crust se release hote hain."
+        }
       },
       {
         "title": "Earthquake Destruction",
         "youtube_url": "https://youtu.be/t6mDtqXtYCo?si=7wsVxqOhIjUVcbjd",
         "timestamp_start": "2:20",
         "timestamp_end": "3:02",
-        "scene_explanation": "The scene shows the ground and roads breaking apart as buildings and surrounding structures are affected by a powerful earthquake.",
-        "concept_connection": "Earthquakes occur when sudden movements within the Earth's crust release energy, causing the ground to shake."
+        "scene_explanation": {
+          "English": "The scene shows the ground and roads breaking apart as buildings and surrounding structures are affected by a powerful earthquake.",
+          "Telugu": "Ee scene lo powerful earthquake valla ground mariyu roads break avvadam, buildings mariyu surrounding structures affect avvadam chupistundi.",
+          "Hindi": "Is scene mein powerful earthquake ki wajah se ground aur roads toot rahe hain aur buildings aur surrounding structures affect ho rahe hain."
+        },
+        "concept_connection": {
+          "English": "Earthquakes occur when sudden movements within the Earth's crust release energy, causing the ground to shake.",
+          "Telugu": "Earthquake ante Earth crust lopala sudden movements valla energy release ayi ground shake avvadam.",
+          "Hindi": "Earthquake tab hota hai jab Earth's crust ke andar sudden movements se energy release hoti hai aur ground shake karta hai."
+        }
       }
     ]
   },
@@ -49,16 +81,32 @@
         "youtube_url": "https://youtu.be/kN2UjCFGdY0?si=psrDnaZtCiZO2JM",
         "timestamp_start": "1:02",
         "timestamp_end": "1:23",
-        "scene_explanation": "The scene shows an image being reflected through a series of mirrors and becoming visible on a cloth in another location.",
-        "concept_connection": "Reflection occurs when light strikes a mirror and changes direction. Multiple mirrors can guide reflected light along different paths, allowing an image to be seen elsewhere."
+        "scene_explanation": {
+          "English": "The scene shows an image being reflected through a series of mirrors and becoming visible on a cloth in another location.",
+          "Telugu": "Ee scene lo series of mirrors dwara image reflect ayi vere place lo unna cloth meeda kanipinchadam chupistundi.",
+          "Hindi": "Is scene mein series of mirrors ke through image reflect hokar doosri jagah ek cloth par visible hoti hai."
+        },
+        "concept_connection": {
+          "English": "Reflection occurs when light strikes a mirror and changes direction. Multiple mirrors can guide reflected light along different paths, allowing an image to be seen elsewhere.",
+          "Telugu": "Light mirror meeda padinappudu direction change cheskoni back ki bounce avvadanni reflection antaru. Multiple mirrors reflected light ni different paths lo guide chesi vere place lo image kanipinchela chestayi.",
+          "Hindi": "Jab light mirror se takrakar direction change karti hai, use reflection kehte hain. Multiple mirrors reflected light ko different paths par guide kar sakte hain."
+        }
       },
       {
         "title": "Reflection on Water",
         "youtube_url": "https://youtu.be/saRPCTmnaSw?si=zvKvNt9oU-mjUsQX",
         "timestamp_start": "2:10",
         "timestamp_end": "2:18",
-        "scene_explanation": "The scene shows a person looking into the water and seeing their image reflected on the water's surface.",
-        "concept_connection": "Reflection occurs when light strikes a smooth surface and bounces back. A calm water surface can reflect light and form a visible image."
+        "scene_explanation": {
+          "English": "The scene shows a person looking into the water and seeing their image reflected on the water's surface.",
+          "Telugu": "Ee scene lo oka person water loki chusi water surface meeda tana image reflection ni chudatam chupistundi.",
+          "Hindi": "Is scene mein ek person water mein dekhkar water surface par apni reflected image dekhta hai."
+        },
+        "concept_connection": {
+          "English": "Reflection occurs when light strikes a smooth surface and bounces back. A calm water surface can reflect light and form a visible image.",
+          "Telugu": "Light smooth surface meeda padinappudu back ki bounce avvadanni reflection antaru. Calm water surface light ni reflect chesi visible image ni form cheyyagaladu.",
+          "Hindi": "Jab light smooth surface se takrakar wapas aati hai, use reflection kehte hain. Calm water surface light ko reflect karke visible image bana sakta hai."
+        }
       }
     ]
   },
@@ -70,16 +118,32 @@
         "youtube_url": "https://youtu.be/xojgT5L2cDc?si=ky8q8r8ZzXme4nnR",
         "timestamp_start": "7:50",
         "timestamp_end": "8:25",
-        "scene_explanation": "The scene shows metal objects being attracted toward Chitti by a strong magnetic force.",
-        "concept_connection": "Magnetism is a force that can attract certain magnetic materials, such as iron, without direct physical contact."
+        "scene_explanation": {
+          "English": "The scene shows metal objects being attracted toward Chitti by a strong magnetic force.",
+          "Telugu": "Ee scene lo strong magnetic force valla metal objects Chitti vaipu attract avvadam chupistundi.",
+          "Hindi": "Is scene mein strong magnetic force ki wajah se metal objects Chitti ki taraf attract hote hue dikhaye gaye hain."
+        },
+        "concept_connection": {
+          "English": "Magnetism is a force that can attract certain magnetic materials, such as iron, without direct physical contact.",
+          "Telugu": "Magnetism anedi direct physical contact lekunda iron laanti konni magnetic materials ni attract cheyyagalige force.",
+          "Hindi": "Magnetism ek force hai jo direct physical contact ke bina iron jaise kuch magnetic materials ko attract kar sakta hai."
+        }
       },
       {
         "title": "Magnetic Attraction and Repulsion",
         "youtube_url": "https://youtube.com/shorts/Qy4q9lqTTMY?si=mssk9oJVMxI1FaN8",
         "timestamp_start": "0:00",
         "timestamp_end": "0:14",
-        "scene_explanation": "The scene demonstrates two magnets interacting through attraction and repulsion.",
-        "concept_connection": "Unlike poles attract each other, while like poles repel each other."
+        "scene_explanation": {
+          "English": "The scene demonstrates two magnets interacting through attraction and repulsion.",
+          "Telugu": "Ee scene lo rendu magnets attraction mariyu repulsion tho interact avvadam demonstrate chestundi.",
+          "Hindi": "Is scene mein do magnets attraction aur repulsion ke through interact karte hue dikhaye gaye hain."
+        },
+        "concept_connection": {
+          "English": "Unlike poles attract each other, while like poles repel each other.",
+          "Telugu": "Unlike poles okadanini okati attract chestayi, while like poles okadanini okati repel chestayi.",
+          "Hindi": "Unlike poles ek doosre ko attract karte hain, jabki like poles ek doosre ko repel karte hain."
+        }
       }
     ]
   },
@@ -91,16 +155,32 @@
         "youtube_url": "https://youtu.be/DvZMKC96Utk?si=5V8VI7ebkS6G5ba6",
         "timestamp_start": "0:30",
         "timestamp_end": "1:26",
-        "scene_explanation": "The scene shows people being insulted and treated unfairly because of their skin colour and background.",
-        "concept_connection": "Social discrimination occurs when people are treated unfairly or differently because of characteristics such as their race, background, or social identity."
+        "scene_explanation": {
+          "English": "The scene shows people being insulted and treated unfairly because of their skin colour and background.",
+          "Telugu": "Ee scene lo skin colour mariyu background valla people ni insult chesi unfair ga treat cheyyadam chupistundi.",
+          "Hindi": "Is scene mein skin colour aur background ki wajah se logon ko insult aur unfair treatment milta hua dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "Social discrimination occurs when people are treated unfairly or differently because of characteristics such as their race, background, or social identity.",
+          "Telugu": "Social discrimination ante race, background leda social identity laanti characteristics valla people ni unfair ga leda different ga treat cheyyadam.",
+          "Hindi": "Social discrimination tab hota hai jab race, background ya social identity jaise characteristics ki wajah se logon ke saath unfair ya different treatment kiya jata hai."
+        }
       },
       {
         "title": "Equality and Social Inclusion",
         "youtube_url": "https://youtu.be/iPiqZ1NrA5o?si=fFiyIlcCUzlIoSr8",
         "timestamp_start": "4:17",
         "timestamp_end": "4:45",
-        "scene_explanation": "The scene shows a person interacting warmly and respectfully with people from different social backgrounds without treating anyone as inferior.",
-        "concept_connection": "Equality and social inclusion mean treating all people with dignity, respect, and fairness regardless of their social background or status."
+        "scene_explanation": {
+          "English": "The scene shows a person interacting warmly and respectfully with people from different social backgrounds without treating anyone as inferior.",
+          "Telugu": "Ee scene lo different social backgrounds unna people tho oka person warm ga mariyu respectful ga interact chestu, evarini inferior ga treat cheyyakunda undadam chupistundi.",
+          "Hindi": "Is scene mein ek person different social backgrounds ke logon ke saath warmly aur respectfully interact karta hai aur kisi ko inferior treat nahi karta."
+        },
+        "concept_connection": {
+          "English": "Equality and social inclusion mean treating all people with dignity, respect, and fairness regardless of their social background or status.",
+          "Telugu": "Equality mariyu social inclusion ante social background leda status tho sambandham lekunda andarini dignity, respect mariyu fairness tho treat cheyyadam.",
+          "Hindi": "Equality aur social inclusion ka matlab hai social background ya status ke bina sabhi logon ko dignity, respect aur fairness ke saath treat karna."
+        }
       }
     ]
   },
@@ -112,16 +192,32 @@
         "youtube_url": "https://youtu.be/mjw8KdCBHsc?si=YoH-D2QkySG1E8rO",
         "timestamp_start": "0:00",
         "timestamp_end": "0:40",
-        "scene_explanation": "The scene visually shows environmental changes and the effects caused by changes in Earth's climate.",
-        "concept_connection": "Climate change refers to long-term changes in Earth's temperature and weather patterns, which can affect ecosystems and the environment."
+        "scene_explanation": {
+          "English": "The scene visually shows environmental changes and the effects caused by changes in Earth's climate.",
+          "Telugu": "Ee scene lo Earth's climate changes valla environment lo jarige changes mariyu effects ni visual ga chupistundi.",
+          "Hindi": "Is scene mein Earth's climate mein changes aur unke environmental effects ko visually dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "Climate change refers to long-term changes in Earth's temperature and weather patterns, which can affect ecosystems and the environment.",
+          "Telugu": "Climate change ante Earth temperature mariyu weather patterns lo long-term changes. Ivi ecosystems mariyu environment ni affect cheyyagalavu.",
+          "Hindi": "Climate change ka matlab Earth ke temperature aur weather patterns mein long-term changes hai, jo ecosystems aur environment ko affect kar sakte hain."
+        }
       },
       {
         "title": "Environmental Impact of Climate Change",
         "youtube_url": "https://youtu.be/G4H1N_yXBiA?si=HRldK39G007n_YqK",
         "timestamp_start": "1:12",
         "timestamp_end": "2:04",
-        "scene_explanation": "The scene shows the effects of changing environmental conditions on the Earth and its natural systems.",
-        "concept_connection": "Rising global temperatures can contribute to major environmental changes, including extreme weather and changes to natural ecosystems."
+        "scene_explanation": {
+          "English": "The scene shows the effects of changing environmental conditions on the Earth and its natural systems.",
+          "Telugu": "Ee scene lo changing environmental conditions valla Earth mariyu natural systems meeda padina effects ni chupistundi.",
+          "Hindi": "Is scene mein changing environmental conditions ka Earth aur natural systems par effect dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "Rising global temperatures can contribute to major environmental changes, including extreme weather and changes to natural ecosystems.",
+          "Telugu": "Rising global temperatures major environmental changes ki contribute cheyyagalavu, including extreme weather mariyu natural ecosystems lo changes.",
+          "Hindi": "Rising global temperatures major environmental changes mein contribute kar sakte hain, including extreme weather aur natural ecosystems mein changes."
+        }
       }
     ]
   },
@@ -133,16 +229,32 @@
         "youtube_url": "https://youtu.be/U0hejW_9hF4?si=lkR6ShYjePYsHdG9",
         "timestamp_start": "0:58",
         "timestamp_end": "1:16",
-        "scene_explanation": "The scene shows an artificial intelligence system processing information and responding using advanced technology.",
-        "concept_connection": "Artificial Intelligence enables computer systems to process information, identify patterns, and perform intelligent tasks."
+        "scene_explanation": {
+          "English": "The scene shows an artificial intelligence system processing information and responding using advanced technology.",
+          "Telugu": "Ee scene lo artificial intelligence system information ni process chesi advanced technology use chesi response ivvadam chupistundi.",
+          "Hindi": "Is scene mein artificial intelligence system information ko process karke advanced technology ke through response deta hua dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "Artificial Intelligence enables computer systems to process information, identify patterns, and perform intelligent tasks.",
+          "Telugu": "Artificial Intelligence computer systems ki information process cheyyadam, patterns identify cheyyadam mariyu intelligent tasks perform cheyyadam enable chestundi.",
+          "Hindi": "Artificial Intelligence computer systems ko information process karne, patterns identify karne aur intelligent tasks perform karne mein help karta hai."
+        }
       },
       {
         "title": "AI Assistant Interaction",
         "youtube_url": "https://youtu.be/rt1dBr2Jz78?si=u8fUiXV3cN3L7Dra",
         "timestamp_start": "1:20",
         "timestamp_end": "2:00",
-        "scene_explanation": "The scene shows an AI-based system interacting with and responding to a person.",
-        "concept_connection": "AI systems can use technologies such as Natural Language Processing to understand and respond to human communication."
+        "scene_explanation": {
+          "English": "The scene shows an AI-based system interacting with and responding to a person.",
+          "Telugu": "Ee scene lo AI-based system oka person tho interact ayi response ivvadam chupistundi.",
+          "Hindi": "Is scene mein ek AI-based system person ke saath interact karke response deta hua dikhaya gaya hai."
+        },
+        "concept_connection": {
+          "English": "AI systems can use technologies such as Natural Language Processing to understand and respond to human communication.",
+          "Telugu": "AI systems Natural Language Processing laanti technologies ni use chesi human communication ni understand chesi response ivvagalavu.",
+          "Hindi": "AI systems Natural Language Processing jaise technologies ka use karke human communication ko samajh aur respond kar sakte hain."
+        }
       }
     ]
   },
@@ -154,16 +266,32 @@
         "youtube_url": "https://youtu.be/t86sKsR4pnk?si=oeB9quYD0Nl5Pd-V",
         "timestamp_start": "1:10",
         "timestamp_end": "2:00",
-        "scene_explanation": "The scene shows automated robotic systems assembling and attaching different parts of a suit without manual assistance.",
-        "concept_connection": "Robotics involves using programmed machines and automated systems to perform tasks accurately and efficiently."
+        "scene_explanation": {
+          "English": "The scene shows automated robotic systems assembling and attaching different parts of a suit without manual assistance.",
+          "Telugu": "Ee scene lo automated robotic systems manual assistance lekunda suit lo different parts ni assemble mariyu attach cheyyadam chupistundi.",
+          "Hindi": "Is scene mein automated robotic systems bina manual assistance ke suit ke different parts ko assemble aur attach karte hue dikhaye gaye hain."
+        },
+        "concept_connection": {
+          "English": "Robotics involves using programmed machines and automated systems to perform tasks accurately and efficiently.",
+          "Telugu": "Robotics ante programmed machines mariyu automated systems ni use chesi tasks ni accurately mariyu efficiently perform cheyyadam.",
+          "Hindi": "Robotics mein programmed machines aur automated systems ka use tasks ko accurately aur efficiently perform karne ke liye kiya jata hai."
+        }
       },
       {
         "title": "Automated Cleaning Robot",
         "youtube_url": "https://youtu.be/nLx_7wEmwms?si=nd4FZlfA956BieTi",
         "timestamp_start": "1:40",
         "timestamp_end": "2:06",
-        "scene_explanation": "The robot moves through a trash-filled environment, collects waste, compresses it into cubes, and continues its cleaning task automatically.",
-        "concept_connection": "Robots can be programmed to perform repetitive tasks automatically and operate in their environment."
+        "scene_explanation": {
+          "English": "The robot moves through a trash-filled environment, collects waste, compresses it into cubes, and continues its cleaning task automatically.",
+          "Telugu": "Ee scene lo robot trash tho unna environment lo move ayi waste collect chesi cubes ga compress chesi automatic ga cleaning task continue cheyyadam chupistundi.",
+          "Hindi": "Is scene mein robot trash-filled environment mein move karta hai, waste collect karta hai, use cubes mein compress karta hai aur automatically cleaning task continue karta hai."
+        },
+        "concept_connection": {
+          "English": "Robots can be programmed to perform repetitive tasks automatically and operate in their environment.",
+          "Telugu": "Robots ni repetitive tasks ni automatically perform cheyyadaniki program cheyyachu mariyu avi tama environment lo operate cheyyagalavu.",
+          "Hindi": "Robots ko repetitive tasks automatically perform karne ke liye program kiya ja sakta hai aur ve apne environment mein operate kar sakte hain."
+        }
       }
     ]
   },
@@ -175,16 +303,32 @@
         "youtube_url": "https://youtu.be/Y5dRycQMHk0?feature=shared",
         "timestamp_start": "0:12",
         "timestamp_end": "1:02",
-        "scene_explanation": "The scene visually shows sunlight, water, and carbon dioxide being used by plants to produce food and oxygen.",
-        "concept_connection": "Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to make food and release oxygen."
+        "scene_explanation": {
+          "English": "The scene visually shows sunlight, water, and carbon dioxide being used by plants to produce food and oxygen.",
+          "Telugu": "Ee scene lo sunlight, water mariyu carbon dioxide ni plants use cheskoni food mariyu oxygen produce cheyyadam visual ga chupistundi.",
+          "Hindi": "Is scene mein plants sunlight, water aur carbon dioxide ka use karke food aur oxygen produce karte hue visually dikhaye gaye hain."
+        },
+        "concept_connection": {
+          "English": "Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to make food and release oxygen.",
+          "Telugu": "Photosynthesis ante green plants sunlight, water mariyu carbon dioxide ni use cheskoni food prepare chesi oxygen release chese process.",
+          "Hindi": "Photosynthesis woh process hai jisme green plants sunlight, water aur carbon dioxide ka use karke food banate hain aur oxygen release karte hain."
+        }
       },
       {
         "title": "Oxygen Release During Photosynthesis",
         "youtube_url": "https://youtube.com/shorts/35SIa6d-beU?si=ShxVSNMLgTzTvl3X",
         "timestamp_start": "0:00",
         "timestamp_end": "0:16",
-        "scene_explanation": "The scene shows a plant in water releasing bubbles that rise to the surface.",
-        "concept_connection": "During photosynthesis, plants produce oxygen as a by-product, which can be observed as bubbles in aquatic plants."
+        "scene_explanation": {
+          "English": "The scene shows a plant in water releasing bubbles that rise to the surface.",
+          "Telugu": "Ee scene lo water lo unna plant bubbles ni release chesi avi surface vaipu rise avvadam chupistundi.",
+          "Hindi": "Is scene mein water mein ek plant bubbles release karta hai jo surface ki taraf rise hote hain."
+        },
+        "concept_connection": {
+          "English": "During photosynthesis, plants produce oxygen as a by-product, which can be observed as bubbles in aquatic plants.",
+          "Telugu": "Photosynthesis during plants oxygen ni by-product ga produce chestayi. Aquatic plants lo ee oxygen bubbles laga observe cheyyachu.",
+          "Hindi": "Photosynthesis ke dauran plants oxygen ko by-product ke roop mein produce karte hain. Aquatic plants mein ise oxygen bubbles ke roop mein dekha ja sakta hai."
+        }
       }
     ]
   },
@@ -196,16 +340,32 @@
         "youtube_url": "https://youtu.be/0qmazUYTYGM?si=uGsqY1ttpcZP4kQt",
         "timestamp_start": "4:20",
         "timestamp_end": "5:47",
-        "scene_explanation": "The scene shows an emergency situation where batteries and electrical power are arranged to operate equipment after a power interruption.",
-        "concept_connection": "Electrical energy from a power source can be used to operate devices when a complete electrical connection is established."
+        "scene_explanation": {
+          "English": "The scene shows an emergency situation where batteries and electrical power are arranged to operate equipment after a power interruption.",
+          "Telugu": "Ee scene lo power interruption tarvata equipment operate cheyyadaniki batteries mariyu electrical power ni arrange cheyyadam chupistundi.",
+          "Hindi": "Is scene mein power interruption ke baad equipment ko operate karne ke liye batteries aur electrical power arrange ki jaati hai."
+        },
+        "concept_connection": {
+          "English": "Electrical energy from a power source can be used to operate devices when a complete electrical connection is established.",
+          "Telugu": "Power source nundi electrical energy complete electrical connection establish ayinappudu devices ni operate cheyyadaniki use cheyyachu.",
+          "Hindi": "Power source se electrical energy ka use devices ko operate karne ke liye kiya ja sakta hai jab complete electrical connection establish ho."
+        }
       },
       {
         "title": "Simple Electric Circuit",
         "youtube_url": "https://youtu.be/x4pdzG-DHnY?si=wxiIlGqA_2F9gAQ2",
         "timestamp_start": "0:40",
         "timestamp_end": "1:02",
-        "scene_explanation": "The video demonstrates a battery, wires, switch, and bulb. When the circuit is complete, the bulb lights up, and when the switch is opened, the bulb turns off.",
-        "concept_connection": "Electric current flows only through a complete circuit. Opening the circuit stops the flow of electricity."
+        "scene_explanation": {
+          "English": "The video demonstrates a battery, wires, switch, and bulb. When the circuit is complete, the bulb lights up, and when the switch is opened, the bulb turns off.",
+          "Telugu": "Ee video battery, wires, switch mariyu bulb tho simple circuit ni demonstrate chestundi. Circuit complete ayinappudu bulb light avuthundi, switch open chesthe bulb off avuthundi.",
+          "Hindi": "Is video mein battery, wires, switch aur bulb wala simple circuit dikhaya gaya hai. Circuit complete hone par bulb jalta hai aur switch open karne par bulb off ho jata hai."
+        },
+        "concept_connection": {
+          "English": "Electric current flows only through a complete circuit. Opening the circuit stops the flow of electricity.",
+          "Telugu": "Electric current complete circuit dwara matrame flow avuthundi. Circuit open chesthe electricity flow stop avuthundi.",
+          "Hindi": "Electric current sirf complete circuit mein flow karta hai. Circuit open karne par electricity ka flow stop ho jata hai."
+        }
       }
     ]
   }
